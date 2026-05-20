@@ -1,5 +1,5 @@
 import pandas as pd
-
+import os
 
 # =========================================================
 # STEP 1: CLEANING FUNCTIONS
@@ -363,3 +363,26 @@ print("Earliest active researcher:"
     , earliest_active['first_name']
     , earliest_active['last_name']
     )
+
+# =========================================================
+# STEP 12: SAVE OUTPUT
+# =========================================================
+
+print("\n=== STEP 12: SAVING OUTPUT ===")
+
+# Create output folder
+os.makedirs('output', exist_ok=True)
+
+# Save cleaned merged dataset
+merged_df.to_csv(
+    'output/clean_research_data.csv',
+    index=False
+)
+
+print("Clean dataset saved successfully!")   
+
+
+# =========================================================
+# END
+# =========================================================
+print("=== ANALYSIS COMPLETE ===")
