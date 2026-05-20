@@ -77,7 +77,7 @@ pip install -r requirements.txt
 ## Run the project
 
 ```bash
-python research_analytics.py
+python research_trail.py
 ```
 
 ---
