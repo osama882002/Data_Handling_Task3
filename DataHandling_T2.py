@@ -258,3 +258,30 @@ funding_check = (
     .all()
 )
 print("All funding researcher IDs exist:", funding_check)
+
+
+# =========================================================
+# STEP 9: MERGE DATASETS
+# =========================================================
+
+print("\n=== STEP 9: MERGING DATASETS ===")
+
+# Merge researchers + publications
+merged_df = pd.merge(
+    df_researchers,
+    df_publications,
+    on='researcher_id',
+    how='inner'
+)
+
+# Merge funding dataset
+merged_df = pd.merge(
+    merged_df,
+    df_funding,
+    on='researcher_id',
+    how='inner'
+)
+
+print("Datasets merged successfully!")
+
+print("\nMerged Dataset Shape:", merged_df.shape)
