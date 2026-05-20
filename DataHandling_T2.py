@@ -53,3 +53,16 @@ def clean_funding(df):
     print("Funding dataset cleaned!")
 
     return df
+
+# =========================================================
+# STEP 2: LOAD DATASETS
+# =========================================================
+
+print("=== STEP 1: LOADING DATASETS ===")
+
+df_researchers = pd.read_csv('data_row/researchers.csv')
+df_publications = pd.read_json('data_row/publications.json')
+df_funding = pd.read_excel('data_row/funding.xlsx')
+
+print("Datasets loaded successfully!")
+
