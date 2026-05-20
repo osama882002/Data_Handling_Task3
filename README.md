@@ -29,7 +29,7 @@ research_analytics/
 ├── output/
 │   └── clean_research_data.csv
 │
-├── research_analytics.py
+├── research_trail.py
 ├── requirements.txt
 └── README.md
 ```
