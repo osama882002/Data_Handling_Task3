@@ -179,3 +179,39 @@ secret_word = (
 )
 
 print("Secret Word:", secret_word)
+
+# =========================================================
+# STEP 6: CP2 PUBLICATIONS ANALYSIS
+# =========================================================
+
+print("\n=== STEP 6: CP2 PUBLICATIONS ANALYSIS ===")
+
+# paper with highest citations
+top_paper = df_publications.loc[
+    df_publications['citations'].idxmax()
+]
+
+# Extract title of the top paper
+top_title = top_paper['title']
+
+print("Most Cited Paper:" , top_title)
+
+# Compare title with secret word
+clean_secret = (
+    secret_word
+    .replace(" ", "")
+    .replace(":", "")
+    .lower()
+)
+
+clean_title = (
+    top_title
+    .replace(" ", "")
+    .replace(":", "")
+    .lower()
+)
+
+if clean_secret in clean_title:
+    print("Secret word is in the title!")
+else:
+    print("Secret word is NOT in the title.")
