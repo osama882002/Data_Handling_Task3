@@ -1,20 +1,22 @@
-# Research Analytics Pipeline
+# 📊 Research Analytics Pipeline
 
-A complete data analysis pipeline built with **Python** and **Pandas** for analyzing research datasets.
+📌 **Description**
 
-This project demonstrates a real-world workflow for:
+This project demonstrates a complete data analysis workflow using **Python** and **Pandas**.
+
+The pipeline includes:
 
 - Loading multiple datasets
 - Exploring and understanding data
 - Cleaning dirty datasets
-- Validating relationships between datasets
+- Validating relationships
 - Merging datasets
 - Performing analytical operations
 - Exporting clean results
 
 ---
 
-# Project Structure
+# 📁 Project Structure
 
 ```text
 research_analytics/
@@ -27,201 +29,44 @@ research_analytics/
 ├── output/
 │   └── clean_research_data.csv
 │
-├── research_trail.py
+├── research_analytics.py
 ├── requirements.txt
 └── README.md
 ```
 
 ---
 
-# Datasets
+# ⚙️ Features
 
-## 1. researchers.csv
-
-Contains researcher information such as:
-
-- Researcher ID
-- Name
-- Research Field
-- Institution
-- Joined Year
-- h-index
-- Publications Count
-- Activity Status
+- Load CSV, JSON, and Excel datasets
+- Perform Exploratory Data Analysis (EDA)
+- Clean missing and invalid data
+- Validate dataset relationships
+- Merge datasets using Pandas
+- Perform analytical operations
+- Export cleaned merged dataset
 
 ---
 
-## 2. publications.json
-
-Contains publication details such as:
-
-- Publication ID
-- Researcher ID
-- Paper Title
-- Citation Count
-- Journal
-- Open Access Status
-
----
-
-## 3. funding.xlsx
-
-Contains funding information such as:
-
-- Grant ID
-- Researcher ID
-- Funding Body
-- Funding Amount
-- Project Title
-- Award Year
-
----
-
-# Technologies Used
-
-- Python
-- Pandas
-- JSON Handling
-- Excel Processing
-- CSV Processing
-
----
-
-# Features
-
-## Data Loading
-
-The project loads data from:
-
-- CSV files
-- JSON files
-- Excel spreadsheets
-
----
-
-## Exploratory Data Analysis (EDA)
-
-The pipeline performs:
-
-- Dataset exploration
-- Shape analysis
-- Column inspection
-- Missing value detection
-- Duplicate detection
-- Data type inspection
-
----
-
-# Data Cleaning Pipeline
-
-The project includes reusable cleaning functions for:
-
-## Researchers Dataset
-
-- Handle missing last names
-- Remove duplicate rows
-
-## Publications Dataset
-
-- Remove duplicates
-- Handle missing titles
-- Convert citations to numeric values
-- Remove invalid citation values
-
-## Funding Dataset
-
-- Convert funding amounts to numeric values
-- Remove invalid funding rows
-- Remove negative values
-- Handle null values
-
----
-
-# Relationship Validation
-
-The pipeline validates:
-
-- researcher_id consistency across datasets
-- relational integrity before merging
-
----
-
-# Dataset Merging
-
-Datasets are merged using:
-
-```python
-pd.merge()
-```
-
-The project demonstrates:
-
-- INNER JOIN
-- LEFT JOIN
-
-
----
-
-# Analysis Performed
+# 📊 Analysis Performed
 
 ## CP1 — Researchers Analysis
-
 - Sort researchers by joined year
 - Filter active researchers
 - Extract hidden message from last names
 
----
-
 ## CP2 — Publications Analysis
-
-- Find paper with highest citations
-- Compare paper title with secret word
-
----
+- Find the most cited paper
+- Compare title with secret word
 
 ## CP3 — Funding Analysis
-
 - Clean funding amounts
-- Sum valid positive funding values
-- Extract encoded year from total funding
+- Sum valid positive values
+- Extract encoded year
 
 ---
 
-# Advanced Analysis
-
-- Researcher with highest citations
-- Field with highest funding
-- Earliest active researcher
-
----
-
-# Exported Output
-
-The final cleaned merged dataset is exported to:
-
-```text
-output/clean_research_data.csv
-```
-
----
-
-# Requirements
-
-The project dependencies are listed in:
-
-```text
-requirements.txt
-```
-
-Install all required packages using:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-# How to Run
+# 🚀 How to Run
 
 ## Install dependencies
 
@@ -229,17 +74,30 @@ pip install -r requirements.txt
 pip install -r requirements.txt
 ```
 
----
-
 ## Run the project
 
 ```bash
-python research_trail.py
+python research_analytics.py
 ```
 
 ---
 
-# Skills Demonstrated
+# 📦 Requirements
+
+- pandas
+- openpyxl
+- pyarrow
+- numpy
+
+Generate requirements file using:
+
+```bash
+pip freeze > requirements.txt
+```
+
+---
+
+# 🧠 Skills Demonstrated
 
 - Data Cleaning
 - Exploratory Data Analysis
@@ -247,28 +105,22 @@ python research_trail.py
 - Data Merging
 - Pandas Operations
 - Data Pipeline Design
-- Relationship Validation
-- Aggregations and Analytics
 
 ---
 
-# Key Learning Outcomes
+# ⭐ Notes
 
-This project demonstrates how to:
+- Raw datasets are excluded using `.gitignore`
+- The virtual environment (`venv/`) is not included in the repository
+- The cleaned dataset is exported to:
 
-- Build reusable cleaning pipelines
-- Handle dirty real-world data
-- Validate dataset relationships
-- Merge structured datasets
-- Perform analytical operations with Pandas
-- Design maintainable data workflows
+```text
+output/clean_research_data.csv
+```
 
 ---
 
-> Note:
-> Raw datasets are excluded from the repository using `.gitignore`.
-
-# Author
+# 👨‍💻 Author
 
 Osama  
 Web Developer & Data Analytics Learner
